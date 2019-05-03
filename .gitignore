@@ -1,0 +1,8 @@
+/friends
+/familly
+
+/dreams
+!/dreams/nightmare-*
+
+# finally
+/hope
