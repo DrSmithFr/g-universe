@@ -1,0 +1,8 @@
+version: '3'
+services:
+  angular:
+    build: docker
+    ports:
+      - 4200:4200
+    volumes:
+      - "./front:/usr/app/"
