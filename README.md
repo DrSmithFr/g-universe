@@ -2,13 +2,20 @@
 
 front applications of G-Universe.
 
-## Installation
+## Installation without docker
+
+ - run `./aliases.sh install_hooks` to enable project's git-hooks.
+ - run `npm install` within `front` folder.
+ - Run `ng serve` within `front` folder to access app on `http://localhost:4200/`.
+
+## Installation with docker
 
  - Install the latest version of docker-ce. ( [Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/) | [Debian](https://docs.docker.com/install/linux/docker-ce/debian/) )
  - Install the latest version of [docker-compose](https://docs.docker.com/compose/install/#install-compose) (prefer pip install).
  - Add your user to the `docker` group, using `sudo adduser $USER docker` and logout/logback to your computer
  - Copy `docker-compose.dist.yml` to `docker-compose.yml`
  - Then run the `./aliases.sh reload` script.
+ - run the `./aliases.sh npm install` script.
  - finally run the `./aliases.sh serve` to access app on `http://localhost:4200/`.
 
 ## Coding style and Standards
@@ -32,7 +39,8 @@ They are inject inside `.git/hooks` using symbolic link during `./aliases.sh rel
 
 ## Every day usage
 
-Run the `./bin/docker reload` script and start using commands from `aliases.sh` script!
+For docker installation run the `./bin/docker reload` script and 
+start using commands from `aliases.sh` script!
 
 ### Aliases commands
 
@@ -51,4 +59,4 @@ Direct access to npm
 Direct access to angular cli console
 
     ./aliases.sh tslint
-Lunch tslint checkup against all application
+Lunch tslint checkup against all application (still usable without docker install)
