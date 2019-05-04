@@ -21,7 +21,6 @@ You will find equivalent in every programming language.
 
 ## Git
 
-Follow [the documentation](documentation/who-to-git.md) to learn who to use git on this project.
 Please use the [git configuration](documentation/git-config.md) of this project.
 
 ### Git Hooks
