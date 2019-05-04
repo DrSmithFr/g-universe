@@ -30,3 +30,6 @@ Direct access to npm
 
     ./aliases.sh ng ...
 Direct access to angular cli console
+
+    ./aliases.sh tslint
+Lunch tslint checkup against all application
