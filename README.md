@@ -11,6 +11,26 @@ front applications of G-Universe.
  - Then run the `./aliases.sh reload` script.
  - finally run the `./aliases.sh serve` to access app on `http://localhost:4200/`.
 
+## Coding style and Standards
+
+- Respect best practices for [javascript](https://github.com/ryanmcdermott/clean-code-javascript) and [php](https://github.com/jupeter/clean-code-php/blob/master/README.md).
+- Respect [AirBnB standards guideline](https://github.com/airbnb/javascript) for javascript.
+
+Try to inspire you as mush as you can of [functional programing](https://www.youtube.com/watch?v=BMUiFMZr7vk&list=PL0zVEGEvSaeEd9hlmCXrk5yUyqUag-n84), it will make your code cleaner, reusable and easy to test. 
+You will find equivalent in every programming language.
+
+## Git
+
+Follow [the documentation](documentation/who-to-git.md) to learn who to use git on this project.
+Please use the [git configuration](documentation/git-config.md) of this project.
+
+### Git Hooks
+
+Git hooks exist as simple text files in your `/hooks` directory.
+They are inject inside `.git/hooks` using symbolic link during `./aliases.sh reload`.
+
+- `pre-commit` hook perform TsLint syntactic checkup over the all code base.
+
 ## Every day usage
 
 Run the `./bin/docker reload` script and start using commands from `aliases.sh` script!

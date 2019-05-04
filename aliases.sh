@@ -2,7 +2,16 @@
 
 ID=$(id -u)
 
+function install_hooks() {
+    ln -sf $(pwd)/hooks/pre-commit .git/hooks/pre-commit
+    ln -sf $(pwd)/hooks/pre-push .git/hooks/pre-push
+}
+
 function reload() {
+    # learn them respect
+    install_hooks
+
+    # reload all containers
     docker-compose kill && \
     docker-compose rm -f && \
     docker-compose build && \
