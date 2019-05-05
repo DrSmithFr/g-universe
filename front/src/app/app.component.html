@@ -1,8 +1,9 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<h2>It works!</h2>
-<router-outlet></router-outlet>
+<ng-container *ngIf="false else displayConnectionTemplate">
+  <h1>G-Universe</h1>
+  <p>A front application.</p>
+</ng-container>
+
+<ng-template #displayConnectionTemplate>
+  <router-outlet></router-outlet>
+</ng-template>
+

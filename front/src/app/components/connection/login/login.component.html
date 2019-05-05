@@ -1,0 +1,48 @@
+<div class="connection-page" [hidden]="isFinish">
+
+    <div class="card-connection">
+        <div class="card-connection-img">
+            <img src="assets/logo.png">
+        </div>
+
+        <h4 class="subtitle">G-Universe</h4>
+
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <mat-form-field>
+                <input matInput placeholder="Username" type="text" formControlName="username" autocomplete="username">
+                <mat-error *ngIf="username.errors && username.touched">
+                    required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Password" [type]="isPasswordHidden ? 'password' : 'text'"
+                    formControlName="password" autocomplete="current-password">
+                <mat-icon matSuffix (click)="isPasswordHidden = !isPasswordHidden">
+                    {{isPasswordHidden ? 'visibility' : 'visibility_off'}}
+                </mat-icon>
+                <mat-error *ngIf="password.invalid && password.touched">
+                  required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-checkbox formControlName="rememberMe">
+                remember me
+            </mat-checkbox>
+
+            <button mat-stroked-button type="submit" [disabled]="!loginForm.valid" *ngIf="!isLoading">
+                login
+            </button>
+            <div class="progress" *ngIf="isLoading">
+                <mat-progress-bar mode="query" color="accent">
+                </mat-progress-bar>
+            </div>
+
+        </form>
+
+        <div class="text-password-reset" (click)="openDialog()">
+            forgot password?
+        </div>
+    </div>
+
+</div>
